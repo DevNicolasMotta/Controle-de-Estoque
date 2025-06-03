@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Controle de Estoque</title>
+  <link rel="stylesheet" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <body class="login">
+
+  <form id="form-login">
+    <h2 class="titulo-form">Login</h2>
+
+    <input type="text" id="usuario" placeholder="Usuário" required>
+    <input type="password" id="senha" placeholder="Senha" required>
+
+    <div class="botoes-formulario">
+      <button type="submit" class="btn-login">Entrar</button>
+    </div>
+    <p id="erro-login" style="color: var(--cor-acento); text-align: center; display: none;">Usuário ou senha inválidos.</p>
+  </form>
+
+  <script>
+    document.getElementById('form-login').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const usuario = document.getElementById('usuario').value;
+      const senha = document.getElementById('senha').value;
+
+      if (usuario === 'admin' && senha === '1234') {
+        localStorage.setItem('logado', 'true');
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById('erro-login').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

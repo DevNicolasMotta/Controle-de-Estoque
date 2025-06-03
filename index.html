@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  if (localStorage.getItem('logado') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+
+</head>
+<body>
+    <div class="cabecalho">
+        <h1>📦Controle de Estoque</h1>
+       <button onclick="logout()" class="btn-cancelar">Sair</button>
+
+    </div>
+       
+
+    <div id="produtos-container"></div>
+    
+    <div id="conteudo">
+        <!-- Aqui será carregado o conteúdo dinamicamente pelo JavaScript -->
+    </div>
+
+    <!-- Modal de Detalhes -->
+    <div id="modal">
+        <div id="modal-conteudo">
+            <div id="modal-detalhes"></div>
+        </div>
+    </div>
+
+<script>
+  function logout() {
+    localStorage.removeItem('logado');
+    window.location.href = 'login.html';
+  }
+</script>
+
+
+ <!-- Script principal -->
+   <script src="estoque.js">
+</script>
+</body>
+</html>
