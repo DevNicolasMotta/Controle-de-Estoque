@@ -1,1 +1,1 @@
-# projeto-estoque
+# controle-estoque
