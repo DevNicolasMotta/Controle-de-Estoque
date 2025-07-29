@@ -4,7 +4,7 @@ Sistema de controle de estoque desenvolvido com HTML, CSS e JavaScript. Permite 
 
 ## 🔐 Acesso ao sistema
 - **Usuário:** admin  
-- **Senha:** ?1234
+- **Senha:** 1234
 
 ## 🚀 Funcionalidades
 - Tela de login segura (simples)
